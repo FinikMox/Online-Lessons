@@ -1,0 +1,33 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+    {% if title %}{{ title }}{% else %}НАЗВАНИЕ{% endif %}
+{% endblock %}
+
+{% block content %}
+    <body style="background-image: url({{ url_for('static', filename='img/tests/rus/rus_test5.jpg') }})">
+        <div class="container" align="center">
+            <div class="header"><br><br><br><br><br><br><br>
+                <h4>5. Какое из перечисленных значение может<br>
+                    быть присуще слову с приставкой при-</h4>
+            </div>
+            <div>
+                <p class="lead"></p>
+                <a class="btn btn-success">1. Территориальная близость</a><br><br>
+                <a class="btn btn-success">2. Неполнота действия</a><br><br>
+                <a class="btn btn-success">3. Нет верного ответа</a><br><br>
+                <a class="btn btn-success">4. Все ответы правильные</a>
+                </p>
+            </div>
+            <div>
+                <p>Введите номер варианта ответ:</p>
+                <input>
+            </div>
+            <div>
+                <p class="lead"></p>
+                <a class="btn btn-lg btn-success" href="6" role="button">Ответить</a>
+                <a class="btn btn-lg btn-success" href="4" role="button">Назад</a>
+            </div>
+        </div>
+    </body>
+{% endblock %}

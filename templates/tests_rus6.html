@@ -1,0 +1,36 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+    {% if title %}{{ title }}{% else %}НАЗВАНИЕ{% endif %}
+{% endblock %}
+
+{% block content %}
+    <body style="background-image: url({{ url_for('static', filename='img/tests/rus/rus_test6.jpg') }})">
+        <div class="container" align="center">
+            <div class="header"><br><br><br><br><br><br><br>
+                <h4>6. Что такое полные формы прилагательных?</h4>
+            </div>
+            <div>
+                <p class="lead"></p>
+                <a class="btn btn-success">1. Склоняемые атрибутивные формы<br>
+                    с нейтральным значением</a><br><br>
+                <a class="btn btn-success">2. Неизменяемые атрибутивные формы<br>
+                    с нейтральным значением</a><br><br>
+                <a class="btn btn-success">3. Склоняемые предикативные формы<br>
+                    со значением действия</a><br><br>
+                <a class="btn btn-success">4. Несклоняемые предикативные формы<br>
+                    с книжным значением</a>
+                </p>
+            </div>
+            <div>
+                <p>Введите номер варианта ответ:</p>
+                <input>
+            </div>
+            <div>
+                <p class="lead"></p>
+                <a class="btn btn-lg btn-success" href="result" role="button">Ответить</a>
+                <a class="btn btn-lg btn-success" href="5" role="button">Назад</a>
+            </div>
+        </div>
+    </body>
+{% endblock %}

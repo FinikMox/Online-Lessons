@@ -1,0 +1,26 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+    {% if title %}{{ title }}{% else %}Лидеры.{% endif %}
+{% endblock %}
+
+{% block content %}
+    <body style="background-image: url({{ url_for('static', filename='img/dev/leaders.jpg') }})">
+        <div class="container" align="center">
+            <div role="presentation">
+                <a class="btn-sm btn-danger" href="login">Войти</a>
+                <a class="btn-sm btn-danger" href="login/register">Зарегистрироваться</a>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <h1>Comming soon...</h1><br><br><br><br>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </div>
+
+            <div>
+                <p class="lead"></p>
+                <p><a class="btn btn-lg btn-danger" href="/" role="button">На Главную</a>
+                </p>
+            </div>
+
+        </div>
+    </body>
+{% endblock %}

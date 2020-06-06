@@ -1,0 +1,33 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+    {% if title %}{{ title }}{% else %}НАЗВАНИЕ{% endif %}
+{% endblock %}
+
+{% block content %}
+    <body style="background-image: url({{ url_for('static', filename='img/tests/math/math_test6.jpg') }})">
+        <div class="container" align="center">
+            <div class="header"><br><br><br><br><br><br><br>
+                <h4>6. Какая из указанных фигур имеет<br>
+                    центр симметрии и ось симметрии?</h4>
+            </div>
+            <div>
+                <p class="lead"></p>
+                <a class="btn btn-success">1. Равносторонний треугольник</a><br><br>
+                <a class="btn btn-success">2. Параллелограмм</a><br><br>
+                <a class="btn btn-success">3. Равнобокая трапеция</a><br><br>
+                <a class="btn btn-success">4. Прямая</a>
+                </p>
+            </div>
+            <div>
+                <p>Введите номер варианта ответ:</p>
+                <input>
+            </div>
+            <div>
+                <p class="lead"></p>
+                <a class="btn btn-lg btn-success" href="result" role="button">Узнать результат</a>
+                <a class="btn btn-lg btn-success" href="5" role="button">Назад</a>
+            </div>
+        </div>
+    </body>
+{% endblock %}

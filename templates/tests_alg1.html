@@ -1,0 +1,36 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+    {% if title %}{{ title }}{% else %}НАЗВАНИЕ{% endif %}
+{% endblock %}
+
+{% block content %}
+    <body style="background-image: url({{ url_for('static', filename='img/tests/math/math_test1.jpg') }})">
+        <div class="container" align="center">
+            <div class="header"><br><br><br><br><br><br><br>
+                <h4>1. Какое утверждение верно<br>
+                    описывает запись 3^5?</h4>
+            </div>
+            <div>
+                <p class="lead"></p>
+                <a class="btn btn-success">1. Эта степень - сокращение записи<br>
+                    произведения 5·5·5</a><br><br>
+                <a class="btn btn-success">2. Эта степень - сокращение записи<br>
+                    произведения 3·3·3·3·3</a><br><br>
+                <a class="btn btn-success">3. 5 - основание степени,<br>
+                    3 - ее показатель</a><br><br>
+                <a class="btn btn-success">4. Значение этой степени равно 15 </a>
+                </p>
+            </div>
+            <div>
+                <p>Введите номер варианта ответ:</p>
+                <input>
+            </div>
+            <div>
+                <p class="lead"></p>
+                <a class="btn btn-lg btn-success" href="2" role="button">Ответить</a>
+                <a class="btn btn-lg btn-success" href="/login/tests" role="button">Назад</a>
+            </div>
+        </div>
+    </body>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+    {% if title %}{{ title }}{% else %}Геометрия. Задание 2.{% endif %}
+{% endblock %}
+
+{% block content %}
+    <body style="background-image: url({{ url_for('static', filename='img/tests/math/math_test2.jpg') }})">
+        <div class="container" align="center">
+            <div class="header"><br><br><br><br><br><br><br>
+                <h4>2. Каким является угол, лежащий против большей cто-<br>
+                роны треугольника со сторонами 4 см, 7 см и 9 см?</h4>
+            </div>
+            <div>
+                <p class="lead"></p>
+                <a class="btn btn-success">1. Острым</a><br><br>
+                <a class="btn btn-success">2. Тупым</a><br><br>
+                <a class="btn btn-success">3. Прямым</a><br>
+                </p>
+            </div>
+            <div>
+                <p>Введите номер варианта ответа:</p>
+                <input>
+            </div>
+            <div>
+                <p class="lead"></p>
+                <a class="btn btn-lg btn-success" href="3" role="button">Ответить</a>
+                <a class="btn btn-lg btn-success" href="1" role="button">Назад</a>
+            </div>
+        </div>
+    </body>
+{% endblock %}

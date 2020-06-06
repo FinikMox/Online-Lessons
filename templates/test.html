@@ -1,0 +1,32 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+    {% if title %}{{ title }}{% else %}НАЗВАНИЕ{% endif %}
+{% endblock %}
+
+{% block content %}
+    <body >
+        <div class="container" align="center">
+            <div class="header"><br><br><br><br><br><br><br>
+                <h4>ВОПРОС</h4>
+            </div>
+            <div>
+                <p class="lead"></p>
+                <a class="btn btn-success">ВАРИАНТ</a><br><br>
+                <a class="btn btn-success">ВАРИАНТ</a><br><br>
+                <a class="btn btn-success">ВАРИАНТ</a><br><br>
+                <a class="btn btn-success">ВАРИАНТ</a>
+                </p>
+            </div>
+            <div>
+                <p>Введите номер варианта ответ:</p>
+                <input>
+            </div>
+            <div>
+                <p class="lead"></p>
+                <a class="btn btn-lg btn-success" href="НОМЕР" role="button">Ответить</a>
+                <a class="btn btn-lg btn-success" href="НОМЕР" role="button">Назад</a>
+            </div>
+        </div>
+    </body>
+{% endblock %}

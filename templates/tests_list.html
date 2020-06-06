@@ -1,0 +1,31 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+    {% if title %}{{ title }}{% else %}Теория.{% endif %}
+{% endblock %}
+
+{% block content %}
+    <body style="background-image: url({{ url_for('static', filename='img/dev/t_or_b.jpg') }})">
+        <div class="container" align="center">
+            <div class="header">
+                <br><br><br>
+                <p><a role="button" class="btn btn-info" href="rus/1">Русский язык.</a>
+                </p><br><br><br><br>
+                <p><a role="button" class="btn btn-success" href="lit/1">Литература.</a>
+                </p><br><br><br><br>
+                <p><a role="button" class="btn btn-warning" href="eng/1">Английский язык.</a>
+                </p><br><br><br><br><br>
+                <p><a role="button" class="btn btn-primary" href="fr/1">Французский язык.</a>
+                </p><br><br><br>
+                <p><a role="button" class="btn btn-success" href="math/1">Математика.</a>
+                </p><br><br><br>
+                <p><a role="button" class="btn btn-warning" href="alg/1">Алгебра.</a>
+                </p><br><br><br><br>
+                <p><a role="button" class="btn btn-danger" href="geom/1">Геометрия.</a>
+                </p><br><br><br>
+                <p><a role="button" class="btn btn-success" href="change">Назад</a>
+                </p>
+            </div>
+        </div>
+    </body>
+{% endblock %}

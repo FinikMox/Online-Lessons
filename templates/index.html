@@ -1,0 +1,25 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+    {% if title %}{{ title }}{% else %}Главная.{% endif %}
+{% endblock %}
+
+{% block content %}
+    <body style="background-image: url({{ url_for('static', filename='img/main/main_menu.jpg') }})">
+        <div class="container" align="center">
+            <div class="header">
+            <p><a class="btn btn-sm btn-info" href="leaders" role="button">Наша гордость</a>
+            </p><br><br><br><br><br><br><br><br>
+            <h3>Добро пожаловать на наш проект!</h3><br>
+        </div>
+
+        <div class="main">
+            <h1>Уроки Онлайн.</h1>
+            <p><a class="btn btn-lg btn-warning" href="login" role="button">НАЧАТЬ</a>
+            </p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+
+            <div class="info">Авторы: Захаров Максим, Маркеева Екатерина</div>
+        </div>
+    </body>
+{% endblock %}

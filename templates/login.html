@@ -1,0 +1,42 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+    {% if title %}{{ title }}{% else %}Авторизация.{% endif %}
+{% endblock %}
+
+{% block content %}
+    <body style="background-image: url({{ url_for('static', filename='img/main/au.jpg') }})">
+        <div align="center">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <h1>Авторизация</h1>
+            <form action="" method="post">
+                {{ form.hidden_tag() }}
+                <p><br>
+                    {{ form.email.label }}
+                    {{ form.email(class="input", id="exampleInputEmail1", type="email", placeholder="Введите Почту") }}
+                    {% for error in form.email.errors %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ error }}
+                        </div>
+                    {% endfor %}
+                </p><br>
+                <p><br>
+                    {{ form.password.label }}
+                    {{ form.password(class="input", id="exampleInputEmail1", type="password", placeholder="Введите Пароль") }}<br>
+                    {% for error in form.password.errors %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ error }}
+                        </div>
+                    {% endfor %}
+                </p><br>
+                <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p><br>
+                <p>{{ form.submit(type="submit", class="btn btn-success") }}</p>
+                <div>{{ message }}</div>
+
+                <div><a class="btn btn-success" href="register">Зарегистрироваться</a>
+                </div>
+
+            </form>
+        </div>
+    </body>
+{% endblock %}
